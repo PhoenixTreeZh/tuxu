@@ -1,0 +1,15 @@
+export type Question = { id:string; chapter:string; page:number|null; key:string; title:string; aliases:string[]; steps:number; video:boolean; detailCount:number; dataPath:string };
+export type Chapter = { id:string; title:string; count:number; pages:{number:number|null; questions:string[]}[] };
+export type Catalog = {version:number; librarySha256:string; chapters:Chapter[]; questions:Question[]};
+export type Hotspot = {id:string; rect:number[]; kind:'detail'|'animation'|'back'; label:string; target_frame_id?:string; target_animation_id?:string};
+export type Frame = {id:string; question:string; width:number; height:number; viewport:number[]; captions:string[]; emptyLinks:number; preview:string; vector:boolean; back?:string; hotspots:Hotspot[]};
+export type Branch = {id:string; label:string; kind:string; frames:string[]};
+export type Animation = {id:string; path:string; width:number; height:number; gif_loop_forever:boolean};
+export type Document = {question:Question; branches:Branch[]; questionFrames:string[]; supplementFrames:string[]; frames:Record<string,Frame>; answer:string; videoPath?:string; originalVideoPath?:string; animations:Record<string,Animation>};
+export type Mode = 'answer'|'question'|'supplement';
+export type Camera = {zoom:number|null; x:number; y:number};
+export type Detail = {kind:'frame'|'animation'; id:string; label:string};
+export type Visit = {detail:Detail|null; camera:Camera};
+export type View = {mode:Mode; branch:string; step:number; detail:Detail|null; history:Visit[]; camera:Camera};
+export type Filters = {chapter:string; page:number|null; query:string; bookmarks:boolean};
+export type State = {catalog:Catalog|null; question:Question|null; document:Document|null; view:View; filters:Filters; matches:Question[]; loading:boolean; error:string|null; bookmarks:string[]; recent:string[]};

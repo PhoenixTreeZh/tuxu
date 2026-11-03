@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="193" height="24" viewBox="0 0 193 24" role="img" aria-label="question bank: 207 entries">
+  <title>question bank: 207 entries</title>
+  <clipPath id="badge"><rect width="193" height="24" rx="4"/></clipPath>
+  <g clip-path="url(#badge)"><path fill="#374151" d="M0 0h103v24H0z"/><path fill="#285d4b" d="M103 0h90v24H103z"/></g>
+  <g fill="#fff" font-family="Verdana,DejaVu Sans,sans-serif" font-size="11" text-anchor="middle">
+    <text x="51.5" y="16" textLength="83" lengthAdjust="spacingAndGlyphs">question bank</text>
+    <text x="148.0" y="16" textLength="70" lengthAdjust="spacingAndGlyphs">207 entries</text>
+  </g>
+</svg>

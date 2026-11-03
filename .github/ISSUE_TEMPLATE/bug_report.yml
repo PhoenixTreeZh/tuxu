@@ -1,0 +1,29 @@
+name: 问题反馈
+description: 报告界面、检索、绘图或安装问题
+body:
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options: [Windows, Android]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 软件与系统版本
+      placeholder: Windows 11 / 图序 1.1.0.7，或 Android 14 / 图序 1.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤与预期结果
+      description: 涉及某道题时，请填写章节、页码、题号和步骤。
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 报错与截图
+      description: 可以附报错文字或课件窗口截图，请遮住其他应用、账号和个人路径。

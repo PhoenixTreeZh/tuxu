@@ -1,0 +1,62 @@
+name: Source checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/studio/package-lock.json
+      - name: Install source dependencies
+        run: npm ci --ignore-scripts
+        working-directory: apps/studio
+      - run: npm test
+        working-directory: apps/studio
+      - run: npm run test:content
+        working-directory: apps/studio
+      - run: npm run build
+        working-directory: apps/studio
+      - name: Audit public source
+        run: python scripts/audit_public_source.py
+      - name: Verify unpacked question bank
+        run: python scripts/verify_content.py
+
+  desktop:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+      - name: Compile desktop with the bundled question bank
+        run: dotnet build apps/desktop/Studio.csproj -c Release
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Android index unit tests (no release key)
+        run: sh ./gradlew testDebugUnitTest --no-daemon
+        working-directory: apps/android

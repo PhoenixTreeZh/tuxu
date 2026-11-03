@@ -1,0 +1,6 @@
+图序 Android 使用以下 Apache-2.0 开源组件：
+Kotlin / kotlinx.coroutines — JetBrains: https://github.com/JetBrains/kotlin
+AndroidX / Jetpack Compose / Media3 — Android Open Source Project: https://android.googlesource.com/platform/frameworks/support/
+miuix 0.4.5 — miuix-kotlin-multiplatform contributors: https://github.com/compose-miuix-ui/miuix/tree/v0.4.5
+AndroidSVG 1.4 — Paul LeBeau: https://github.com/BigBadaboom/androidsvg
+许可全文见 Apache-2.0.txt。Inkscape 和 FFmpeg 仅用于构建/资源转换，其程序二进制未装入 APK。
