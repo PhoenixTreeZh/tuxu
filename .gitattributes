@@ -1,0 +1,20 @@
+* text=auto
+*.sh text eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary
+*.jar binary
+*.gif binary
+*.wmf binary
+*.mp4 binary
+*.webm binary
+*.avi binary
+
+# Generated content is checksum-addressed: preserve its original bytes on every OS.
+/content/windows/** -text
+/apps/android/app/src/main/assets/content/** -text

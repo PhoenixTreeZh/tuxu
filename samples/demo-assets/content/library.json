@@ -1,0 +1,428 @@
+{
+  "version": 2,
+  "chapters": [
+    {
+      "id": "ch01",
+      "title": "第1章 原创演示",
+      "pages": [
+        1
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ch01/P1",
+      "chapter_id": "ch01",
+      "page": 1,
+      "key": "P1",
+      "title": "示例绘图",
+      "branches": [
+        {
+          "id": "demo-answer",
+          "label": "绘制过程",
+          "kind": "steps",
+          "frame_ids": [
+            "demo-step-1",
+            "demo-step-2",
+            "demo-step-3"
+          ],
+          "complete_frames_available": true
+        }
+      ],
+      "root_question_frame_ids": [],
+      "root_supplement_frame_ids": [],
+      "query_aliases": [],
+      "available_answer_branches": 1
+    }
+  ],
+  "frames": {
+    "demo-step-1": {
+      "id": "demo-step-1",
+      "question_id": "ch01/P1",
+      "role": "answer",
+      "status": "rendered",
+      "image": null,
+      "width": 700,
+      "height": 500,
+      "captions": [
+        "示例：先绘制矩形轮廓。"
+      ],
+      "scene": {
+        "version": 1,
+        "viewport": [
+          0,
+          0,
+          700,
+          500
+        ],
+        "operations": [
+          {
+            "kind": "fill_rectangle",
+            "rect": [
+              0,
+              0,
+              700,
+              500
+            ],
+            "color": [
+              21,
+              30,
+              32
+            ]
+          },
+          {
+            "kind": "stroke_rectangle",
+            "rect": [
+              120,
+              110,
+              580,
+              390
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          }
+        ],
+        "contains_vector_content": true,
+        "vector_asset_count": 0,
+        "raster_asset_count": 0,
+        "geometry_count": 2,
+        "text_count": 0
+      },
+      "hotspots": [],
+      "back_target_frame_id": null
+    },
+    "demo-step-2": {
+      "id": "demo-step-2",
+      "question_id": "ch01/P1",
+      "role": "answer",
+      "status": "rendered",
+      "image": null,
+      "width": 700,
+      "height": 500,
+      "captions": [
+        "示例：绘制第一条对角线。"
+      ],
+      "scene": {
+        "version": 1,
+        "viewport": [
+          0,
+          0,
+          700,
+          500
+        ],
+        "operations": [
+          {
+            "kind": "fill_rectangle",
+            "rect": [
+              0,
+              0,
+              700,
+              500
+            ],
+            "color": [
+              21,
+              30,
+              32
+            ]
+          },
+          {
+            "kind": "stroke_rectangle",
+            "rect": [
+              120,
+              110,
+              580,
+              390
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          },
+          {
+            "kind": "line",
+            "points": [
+              [
+                120,
+                110
+              ],
+              [
+                580,
+                390
+              ]
+            ],
+            "color": [
+              169,
+              210,
+              172
+            ],
+            "pen_width": 2
+          }
+        ],
+        "contains_vector_content": true,
+        "vector_asset_count": 0,
+        "raster_asset_count": 0,
+        "geometry_count": 3,
+        "text_count": 0
+      },
+      "hotspots": [],
+      "back_target_frame_id": null
+    },
+    "demo-step-3": {
+      "id": "demo-step-3",
+      "question_id": "ch01/P1",
+      "role": "answer",
+      "status": "rendered",
+      "image": null,
+      "width": 700,
+      "height": 500,
+      "captions": [
+        "示例：补全对角线与圆，点击圆查看局部。"
+      ],
+      "scene": {
+        "version": 1,
+        "viewport": [
+          0,
+          0,
+          700,
+          500
+        ],
+        "operations": [
+          {
+            "kind": "fill_rectangle",
+            "rect": [
+              0,
+              0,
+              700,
+              500
+            ],
+            "color": [
+              21,
+              30,
+              32
+            ]
+          },
+          {
+            "kind": "stroke_rectangle",
+            "rect": [
+              120,
+              110,
+              580,
+              390
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          },
+          {
+            "kind": "line",
+            "points": [
+              [
+                120,
+                110
+              ],
+              [
+                580,
+                390
+              ]
+            ],
+            "color": [
+              169,
+              210,
+              172
+            ],
+            "pen_width": 2
+          },
+          {
+            "kind": "line",
+            "points": [
+              [
+                580,
+                110
+              ],
+              [
+                120,
+                390
+              ]
+            ],
+            "color": [
+              169,
+              210,
+              172
+            ],
+            "pen_width": 2
+          },
+          {
+            "kind": "stroke_ellipse",
+            "rect": [
+              270,
+              170,
+              430,
+              330
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          }
+        ],
+        "contains_vector_content": true,
+        "vector_asset_count": 0,
+        "raster_asset_count": 0,
+        "geometry_count": 5,
+        "text_count": 0
+      },
+      "hotspots": [
+        {
+          "id": "demo-open-detail",
+          "kind": "detail",
+          "rect": [
+            270,
+            170,
+            430,
+            330
+          ],
+          "label": "圆与对角线",
+          "target_frame_id": "demo-detail"
+        }
+      ],
+      "back_target_frame_id": null
+    },
+    "demo-detail": {
+      "id": "demo-detail",
+      "question_id": "ch01/P1",
+      "role": "answer",
+      "status": "rendered",
+      "image": null,
+      "width": 260,
+      "height": 300,
+      "captions": [
+        "原创演示：圆与对角线的局部。"
+      ],
+      "scene": {
+        "version": 1,
+        "viewport": [
+          220,
+          100,
+          480,
+          400
+        ],
+        "operations": [
+          {
+            "kind": "fill_rectangle",
+            "rect": [
+              0,
+              0,
+              700,
+              500
+            ],
+            "color": [
+              21,
+              30,
+              32
+            ]
+          },
+          {
+            "kind": "stroke_rectangle",
+            "rect": [
+              120,
+              110,
+              580,
+              390
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          },
+          {
+            "kind": "line",
+            "points": [
+              [
+                120,
+                110
+              ],
+              [
+                580,
+                390
+              ]
+            ],
+            "color": [
+              169,
+              210,
+              172
+            ],
+            "pen_width": 2
+          },
+          {
+            "kind": "line",
+            "points": [
+              [
+                580,
+                110
+              ],
+              [
+                120,
+                390
+              ]
+            ],
+            "color": [
+              169,
+              210,
+              172
+            ],
+            "pen_width": 2
+          },
+          {
+            "kind": "stroke_ellipse",
+            "rect": [
+              270,
+              170,
+              430,
+              330
+            ],
+            "color": [
+              248,
+              247,
+              244
+            ],
+            "pen_width": 3
+          }
+        ],
+        "contains_vector_content": true,
+        "vector_asset_count": 0,
+        "raster_asset_count": 0,
+        "geometry_count": 5,
+        "text_count": 0
+      },
+      "hotspots": [
+        {
+          "id": "demo-back",
+          "kind": "back",
+          "rect": [
+            220,
+            100,
+            480,
+            400
+          ],
+          "label": "返回总图",
+          "target_frame_id": "demo-step-3"
+        }
+      ],
+      "back_target_frame_id": "demo-step-3"
+    }
+  },
+  "animations": {}
+}

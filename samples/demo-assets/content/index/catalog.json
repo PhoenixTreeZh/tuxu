@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "librarySha256": "original-demo",
+  "chapters": [
+    {
+      "id": "ch01",
+      "title": "第1章 原创演示",
+      "count": 1,
+      "pages": [
+        {
+          "number": 1,
+          "questions": [
+            "ch01/P1"
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "ch01/P1",
+      "chapter": "ch01",
+      "page": 1,
+      "key": "P1",
+      "title": "示例绘图",
+      "aliases": [],
+      "steps": 3,
+      "video": false,
+      "detailCount": 1,
+      "dataPath": "index/questions/demo.json"
+    }
+  ]
+}

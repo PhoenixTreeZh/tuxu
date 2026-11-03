@@ -1,0 +1,25 @@
+/* Popup surfaces follow the document theme instead of an OS light menu. */
+select,option{background-color:var(--surface);color:var(--ink);color-scheme:inherit}
+.chapter-field{flex-shrink:0}
+.chapter-field>label{display:block;font-size:10px;color:var(--muted);margin:0 4px 8px}
+.chapter-filter{padding:0;border-radius:9px;background:var(--surface)}
+.chapter-filter select{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:11px 12px;border-radius:8px;min-height:42px;font-size:12px;font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chapter-filter:focus-within{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+@supports(appearance:base-select){
+  select,select::picker(select){appearance:base-select}
+  #chapter{appearance:base-select}
+  select{align-items:center;gap:8px}
+  select::picker(select){background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:10px;padding:6px;margin-block-start:6px;box-shadow:var(--shadow),0 4px 16px #00000018;max-height:min(60dvh,420px);overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+  select::picker-icon{color:var(--muted);font-size:10px;transition:rotate .16s}
+  select:open::picker-icon{rotate:180deg}
+  select option{display:flex;align-items:center;gap:12px;border-radius:6px;min-height:37px;padding:9px 10px;font-size:12px;font-weight:400;line-height:1.5;white-space:normal;background:var(--surface);color:var(--ink)}
+  select option:hover,select option:focus-visible{background:var(--hover);outline:none}
+  select option:checked{background:var(--accent-soft);color:var(--accent);font-weight:550}
+  select option::checkmark{color:var(--accent);order:3;margin-inline-start:auto}
+  select option[data-count]::after{content:attr(data-count);color:var(--muted);font-size:10px;font-weight:400;white-space:nowrap;margin-inline-start:auto}
+  #chapter::picker(select){min-width:min(324px,calc(100vw - 32px))}
+  #chapter option{padding:11px 12px;min-height:42px}
+  .list-heading select{background:transparent;max-width:none;min-width:70px;font-size:10px;padding:3px 0}
+  .list-heading select::picker(select){min-width:144px}
+  .reader-modebar>select{background:var(--surface);padding:7px 10px}
+}

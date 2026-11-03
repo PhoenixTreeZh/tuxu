@@ -1,0 +1,68 @@
+# Local research, original courseware, delivery files and signing material.
+/_rea_temp/
+/本地签名备份/
+/安装包/
+/新版软件/
+/第*章*/
+/综合练习解答/
+/项目交接文档.md
+/项目完整清单.md
+/GitHub准备/
+/artifacts/
+/*.lnk
+
+# Only these four files in the legacy Windows folder are used by the current app.
+/apps/windows/*
+!/apps/windows/Library.cs
+!/apps/windows/NativeText.cs
+!/apps/windows/SceneRenderer.cs
+!/apps/windows/SceneVerification.cs
+
+# Unpacked content is versioned in content/windows and Android's assets/content.
+
+# Dependencies, build products, device/runtime profiles and local configuration.
+**/node_modules/
+**/bin/
+**/obj/
+**/dist/
+**/build/
+**/.gradle/
+**/.kotlin/
+**/__pycache__/
+**/test-profile/
+**/user-data/
+**/.idea/
+**/local.properties
+*.tsbuildinfo
+*.pyc
+*.log
+*.tmp
+*.pending
+.DS_Store
+Thumbs.db
+
+# Never commit credentials, signing private keys or local environment values.
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.key
+*.pem
+*.mobileprovision
+**/password.txt
+**/secrets.json
+**/key.properties
+**/credentials.json
+
+# Release binaries belong in GitHub Releases, not normal Git history.
+*.exe
+*.dll
+*.pdb
+*.apk
+*.aab
+*.msi
+*.zip
+*.7z

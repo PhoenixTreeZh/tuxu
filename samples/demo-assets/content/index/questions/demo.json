@@ -1,0 +1,142 @@
+{
+  "question": {
+    "id": "ch01/P1",
+    "chapter": "ch01",
+    "page": 1,
+    "key": "P1",
+    "title": "示例绘图",
+    "aliases": [],
+    "steps": 3,
+    "video": false,
+    "detailCount": 1,
+    "dataPath": "index/questions/demo.json"
+  },
+  "branches": [
+    {
+      "id": "demo-answer",
+      "label": "绘制过程",
+      "kind": "steps",
+      "frames": [
+        "demo-step-1",
+        "demo-step-2",
+        "demo-step-3"
+      ]
+    }
+  ],
+  "questionFrames": [],
+  "supplementFrames": [],
+  "frames": {
+    "demo-step-1": {
+      "id": "demo-step-1",
+      "question": "ch01/P1",
+      "width": 700,
+      "height": 500,
+      "viewport": [
+        0,
+        0,
+        700,
+        500
+      ],
+      "captions": [
+        "示例：先绘制矩形轮廓。"
+      ],
+      "emptyLinks": 0,
+      "preview": "",
+      "svg": "demo/demo-step-1.svg",
+      "vector": true,
+      "back": null,
+      "hotspots": []
+    },
+    "demo-step-2": {
+      "id": "demo-step-2",
+      "question": "ch01/P1",
+      "width": 700,
+      "height": 500,
+      "viewport": [
+        0,
+        0,
+        700,
+        500
+      ],
+      "captions": [
+        "示例：绘制第一条对角线。"
+      ],
+      "emptyLinks": 0,
+      "preview": "",
+      "svg": "demo/demo-step-2.svg",
+      "vector": true,
+      "back": null,
+      "hotspots": []
+    },
+    "demo-step-3": {
+      "id": "demo-step-3",
+      "question": "ch01/P1",
+      "width": 700,
+      "height": 500,
+      "viewport": [
+        0,
+        0,
+        700,
+        500
+      ],
+      "captions": [
+        "示例：补全对角线与圆，点击圆查看局部。"
+      ],
+      "emptyLinks": 0,
+      "preview": "",
+      "svg": "demo/demo-step-3.svg",
+      "vector": true,
+      "back": null,
+      "hotspots": [
+        {
+          "id": "demo-open-detail",
+          "kind": "detail",
+          "rect": [
+            270,
+            170,
+            430,
+            330
+          ],
+          "label": "圆与对角线",
+          "target_frame_id": "demo-detail"
+        }
+      ]
+    },
+    "demo-detail": {
+      "id": "demo-detail",
+      "question": "ch01/P1",
+      "width": 260,
+      "height": 300,
+      "viewport": [
+        220,
+        100,
+        480,
+        400
+      ],
+      "captions": [
+        "原创演示：圆与对角线的局部。"
+      ],
+      "emptyLinks": 0,
+      "preview": "",
+      "svg": "demo/demo-detail.svg",
+      "vector": true,
+      "back": "demo-step-3",
+      "hotspots": [
+        {
+          "id": "demo-back",
+          "kind": "back",
+          "rect": [
+            220,
+            100,
+            480,
+            400
+          ],
+          "label": "返回总图",
+          "target_frame_id": "demo-step-3"
+        }
+      ]
+    }
+  },
+  "animations": {},
+  "answer": ""
+}

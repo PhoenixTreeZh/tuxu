@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net10.0-windows</TargetFramework><UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained><AssemblyName>DrawingStudio</AssemblyName><ApplicationManifest>app.manifest</ApplicationManifest>
+    <Version>1.1.0</Version><FileVersion>1.1.0.7</FileVersion><AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <ApplicationIcon>../../assets/brand/app.ico</ApplicationIcon>
+    <TuxuContentRoot Condition="'$(TuxuContentRoot)' == '' And Exists('$(MSBuildThisFileDirectory)../../content/windows/library.json')">$(MSBuildThisFileDirectory)../../content/windows</TuxuContentRoot>
+    <TuxuContentRoot Condition="'$(TuxuContentRoot)' == '' And Exists('$(MSBuildThisFileDirectory)../../_rea_temp/reader/content/library.json')">$(MSBuildThisFileDirectory)../../_rea_temp/reader/content</TuxuContentRoot>
+    <TuxuContentRoot Condition="'$(TuxuContentRoot)' == ''">$(MSBuildThisFileDirectory)../../samples/demo-assets/content</TuxuContentRoot>
+    <DefineConstants>$(DefineConstants);DESKTOP_STUDIO</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="../../assets/brand/app.ico" LogicalName="DrawingStudio.AppIcon" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
+    <Compile Include="../windows/Library.cs" Link="Core/Library.cs" />
+    <Compile Include="../windows/SceneRenderer.cs" Link="Core/SceneRenderer.cs" />
+    <Compile Include="../windows/NativeText.cs" Link="Core/NativeText.cs" />
+    <Compile Include="../windows/SceneVerification.cs" Link="Core/SceneVerification.cs" />
+    <Content Include="../studio/dist/**/*" Link="ui/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="$(TuxuContentRoot)/**/*" Exclude="$(TuxuContentRoot)/library.js" Link="content/%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <Target Name="RemoveUnusedWebViewWpfReference" BeforeTargets="ResolveAssemblyReferences"><ItemGroup><Reference Remove="@(Reference)" Condition="'%(Reference.Filename)' == 'Microsoft.Web.WebView2.Wpf'" /></ItemGroup></Target>
+</Project>
