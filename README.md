@@ -19,7 +19,7 @@
 
 ![图序 Windows 与 Android 界面：两端截图以相同高度并排展示](./docs/screenshots/platform-previews.png)
 
-Windows（左）支持章页检索、鼠标缩放与单步绘图；Android（右）支持双指缩放与横屏阅读。两张截图等高展示。
+Windows（左）支持章页检索、鼠标缩放与单步绘图；Android（右）支持双指缩放与横屏阅读。
 
 查看高清原图：[Windows](./docs/screenshots/windows-reader.png) · [Android](./docs/screenshots/android-reader.jpg)
 
